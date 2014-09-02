@@ -26,8 +26,7 @@ function BMI(w, h) {
  */
 angular.module('workspaceApp')
   .controller('AboutCtrl', function ($scope) {
-    var weight, height;
-    $scope.BMI = BMI(weight, height);
-    $scope.fm = Fatmass($scope.BMI, $scope.age, $scope.weight, $scope.sex);
-    $scope.fp = Fatpercent($scope.fm, $scope.weight);
+    $scope.BMI = BMI($scope.weight, $scope.height);
+    //$scope.fm = Fatmass($scope.BMI, $scope.age, $scope.weight, $scope.sex);
+    //$scope.fp = Fatpercent($scope.fm, $scope.weight);
   });
