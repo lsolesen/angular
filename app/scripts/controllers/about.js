@@ -30,14 +30,14 @@ angular.module('workspaceApp')
       h = h / 100;
       return w / (h * h);
     };
-    $scope.fat_mass = function(BMI, age, weight, sex) {
+    $scope.fatMass = function(BMI, age, weight, sex) {
       if (sex == 'man') {
         return 0.988 * BMI + 0.242 * weight + 0.094 * age - 30.18;
       } else {
         return 0.988 * BMI + 0.344 * weight + 0.094 * age - 30.18; 
       }
     };
-    $scope.fat_percent = function(fm, weight) {
+    $scope.fatPercent = function(fm, weight) {
       return fm / weight * 100;
     };
   });

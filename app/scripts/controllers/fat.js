@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name workspaceApp.controller:AboutCtrl
+ * @name workspaceApp.controller:FatctrlCtrl
  * @description
- * # AboutCtrl
+ * # FatctrlCtrl
  * Controller of the workspaceApp
  */
 angular.module('workspaceApp')
   .controller('FatCtrl', function ($scope) {
-    $scope.text = 'This is the about view.';
+    $scope.text = 'fat controller';
   });
