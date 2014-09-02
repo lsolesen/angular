@@ -26,7 +26,18 @@ function BMI(w, h) {
  */
 angular.module('workspaceApp')
   .controller('AboutCtrl', function ($scope) {
-    $scope.BMI = BMI($scope.weight, $scope.height);
-    //$scope.fm = Fatmass($scope.BMI, $scope.age, $scope.weight, $scope.sex);
-    //$scope.fp = Fatpercent($scope.fm, $scope.weight);
+    $scope.BMI = function(w, h) {
+      h = h / 100;
+      return w / (h * h);
+    };
+    $scope.fat_mass = function(BMI, age, weight, sex) {
+      if (sex == 'man') {
+        return 0.988 * BMI + 0.242 * weight + 0.094 * age - 30.18;
+      } else {
+        return 0.988 * BMI + 0.344 * weight + 0.094 * age - 30.18; 
+      }
+    };
+    $scope.fat_percent = function(fm, weight) {
+      return fm / weight * 100;
+    };
   });
