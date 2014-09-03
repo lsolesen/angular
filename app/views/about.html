@@ -1,20 +1,20 @@
 <form role="form" ng-submit="Calculate(form)">
-  <div data-role="fieldcontain">
+  <div data-role="form-group">
     <label>Køn:</label>
     <input ng-model="sex" checked="checked" name="sex" type="radio" value="man" /> <label for="sex_man">Mand</label> 
     <input ng-model="sex" name="sex" type="radio" value="woman" /> <label for"sex_woman">Kvinde</label>
   </div>
-  <div data-role="fieldcontain">
+  <div data-role="form-group">
     <label>Alder:</label>
-    <input ng-model="age" name="age" size="3" type="number" data-clear-btn="true" placeholder="Din alder i år" /> år
+    <input ng-model="age" name="age" type="number" data-clear-btn="true" placeholder="Din alder i år" /> år
   </div>
-  <div data-role="fieldcontain">
+  <div data-role="form-group">
     <label>Højde:</label>
-    <input ng-model="height" name="height" size="3" type="number" data-clear-btn="true" placeholder="Din højde i cm" /> cm
+    <input ng-model="height" name="height" type="number" data-clear-btn="true" placeholder="Din højde i cm" /> cm
   </div>
-  <div data-role="fieldcontain">
+  <div data-role="form-group">
     <label>Vægt:</label>
-    <input ng-model="weight" name="weight" size="3" value="" data-clear-btn="true" placeholder="Din vægt i kg" /> kg
+    <input ng-model="weight" name="weight" type="number" data-clear-btn="true" placeholder="Din vægt i kg" /> kg
   </div>
 
   <input class="btn btn-primary" type="submit" data-role="button" value="Udregn" data-icon="check" />
