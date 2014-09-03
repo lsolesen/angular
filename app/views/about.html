@@ -1,25 +1,8 @@
-<form role="form" ng-submit="Calculate(form)">
-  <div data-role="form-group">
-    <label>Køn:</label>
-    <input ng-model="sex" checked="checked" name="sex" type="radio" value="man" /> <label for="sex_man">Mand</label> 
-    <input ng-model="sex" name="sex" type="radio" value="woman" /> <label for"sex_woman">Kvinde</label>
-  </div>
-  <div data-role="form-group">
-    <label>Alder:</label>
-    <input ng-model="age" name="age" type="number" data-clear-btn="true" placeholder="Din alder i år" /> år
-  </div>
-  <div data-role="form-group">
-    <label>Højde:</label>
-    <input ng-model="height" name="height" type="number" data-clear-btn="true" placeholder="Din højde i cm" /> cm
-  </div>
-  <div data-role="form-group">
-    <label>Vægt:</label>
-    <input ng-model="weight" name="weight" type="number" data-clear-btn="true" placeholder="Din vægt i kg" /> kg
-  </div>
-
-  <input class="btn btn-primary" type="submit" data-role="button" value="Udregn" data-icon="check" />
-</form>
-
-<p>BMI: {{BMI(weight, height)}}</p>
-<p>Fedtmasse: {{fatMass(BMI(weight, height), age, weight, sex)}}</p>
-<p>Fedtprocent: {{fatPercent(fatMass(BMI(weight, height), age, weight, sex), weight)}}</p>
+<div class="jumbotron">
+  <h1>Hej!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Værktøjer til udregning af træning bragt af Motionsplan.dk.
+  </p>
+  <p><a class="btn btn-lg btn-success" href="http://motionsplan.dk">Besøg!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>

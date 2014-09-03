@@ -31,6 +31,10 @@ angular
         templateUrl: 'views/fat.html',
         controller: 'FatCtrl'
       })
+      .when('/energy', {
+        templateUrl: 'views/energy.html',
+        controller: 'EnergyCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,1 +1,40 @@
-{{text}}
+<form role="form" ng-submit="Calculate(form)">
+  <div class="form-group">
+    <label>Køn:</label>
+    <label class="radio-inline">
+      <input ng-model="sex" name="sex" type="radio" value="man" /> 
+      Mand</label>
+    <label class="radio-inline">
+      <input ng-model="sex" name="sex" type="radio" value="woman" /> 
+      Kvinde</label>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Alder</label>
+    <div class="input-group">
+      <input ng-model="age" class="form-control input-lg" name="age" type="number" data-clear-btn="true" placeholder="Alder i år" />
+      <div class="input-group-addon">år</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Højde</label>
+    <div class="input-group">
+      <input ng-model="height" class="form-control input-lg" name="height" type="number" data-clear-btn="true" placeholder="Højde i cm" />
+      <div class="input-group-addon">cm</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Vægt</label>
+    <div class="input-group">
+      <input ng-model="weight" class="form-control input-lg" name="weight" type="number" data-clear-btn="true" placeholder="Vægt i kg" />
+      <div class="input-group-addon">kg</div>
+    </div>
+  </div>
+
+  <button class="btn btn-lg btn-primary" type="submit" data-role="button">Udregn</button>
+</form>
+
+<div class="bg-info well-lg" style="margin-top: 1em;">
+  <p>BMI: {{BMI(weight, height)}}</p>
+  <p>Fedtmasse: {{fatMass(BMI(weight, height), age, weight, sex)}} kg</p>
+  <p>Fedtprocent: {{fatPercent(fatMass(BMI(weight, height), age, weight, sex), weight)}}%</p>
+</div>

@@ -1,0 +1,22 @@
+<form role="form" ng-submit="Calculate(form)">
+  <div class="form-group">
+    <label class="sr-only">Distance</label>
+    <div class="input-group">
+      <input ng-model="distance" class="form-control input-lg" name="distance" type="number" data-clear-btn="true" placeholder="Distance i meter" />
+      <div class="input-group-addon">m</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Vægt</label>
+    <div class="input-group">
+      <input ng-model="weight" class="form-control input-lg" name="weight" type="number" data-clear-btn="true" placeholder="Vægt i kg" />
+      <div class="input-group-addon">kg</div>
+    </div>
+  </div>
+
+  <button class="btn btn-lg btn-primary" type="submit" data-role="button">Udregn</button>
+</form>
+
+<div class="bg-info well-lg" style="margin-top: 1em;">
+  <p>Energiforbrug: {{energy(weight, distance)}} kJ</p>
+</div>
