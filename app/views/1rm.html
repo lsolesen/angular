@@ -1,0 +1,27 @@
+<form role="form" ng-submit="Calculate(form)">
+  <div class="form-group">
+    <label class="sr-only">Vægt</label>
+    <div class="input-group">
+      <input ng-model="weight" class="form-control input-lg" name="weight" type="number" data-clear-btn="true" placeholder="Vægt i kg" />
+      <div class="input-group-addon">kg</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Gentagelser</label>
+    <div class="input-group">
+      <input ng-model="repetitions" min="0" max="10" class="form-control input-lg" name="Gentagelser" type="number" data-clear-btn="true" placeholder="Antal gentagelser" />
+      <div class="input-group-addon">x</div>
+    </div>
+  </div>
+  <button class="btn btn-lg btn-primary" type="submit" data-role="button">Udregn</button>
+</form>
+
+<div class="bg-info well-lg" style="margin-top: 1em;">
+  <p>Bryzcki: {{brzycki(weight, repetitions)}} kg</p>
+  <p>Epley: {{epley(weight, repetitions)}} kg</p>
+  <p>Lander: {{lander(weight, repetitions)}} kg</p>
+  <p>Lombardi: {{lombardi(weight, repetitions)}} kg</p>
+  <p>Mayhewetal: {{mayhewetal(weight, repetitions)}} kg</p>
+  <p>O'Connertal: {{oconneretal(weight, repetitions)}} kg</p>
+  <p>Wathan: {{wathan(weight, repetitions)}} kg</p>
+</div>

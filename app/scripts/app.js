@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/energy.html',
         controller: 'EnergyCtrl'
       })
+      .when('/1rm', {
+        templateUrl: 'views/1rm.html',
+        controller: 'OneRMCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

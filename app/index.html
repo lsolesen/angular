@@ -15,13 +15,7 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -37,9 +31,9 @@
             <li><a ng-href="#/about">Om</a></li>
           </ul>
         </div>
-        </nav>
-      </div>
+      </nav>
 
+    <div class="container">
       <div ng-view=""></div>
 
       <div class="footer">
@@ -95,6 +89,7 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/fat.js"></script>
         <script src="scripts/controllers/energy.js"></script>
+        <script src="scripts/controllers/1rm.js"></script>
         <!-- endbuild -->
     <script src="phonegap.js"></script>
   </body>
