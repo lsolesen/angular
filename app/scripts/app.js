@@ -39,6 +39,10 @@ angular
         templateUrl: 'views/1rm.html',
         controller: 'OneRMCtrl'
       })
+      .when('/vdot', {
+        templateUrl: 'views/vdot.html',
+        controller: 'VdotCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,36 @@
+<form role="form" ng-submit="Calculate(form)">
+  <div class="form-group">
+    <label class="sr-only">Distance</label>
+    <div class="input-group">
+      <input ng-model="distance" class="form-control input-lg" name="distance" type="number" data-clear-btn="true" placeholder="Distance i km" />
+      <div class="input-group-addon">km</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Timer</label>
+    <div class="input-group">
+      <input ng-model="hours" class="form-control input-lg" name="hours" type="number" data-clear-btn="true" placeholder="Timer" />
+      <div class="input-group-addon">timer</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Minutter</label>
+    <div class="input-group">
+      <input ng-model="minutes" class="form-control input-lg" name="minutes" type="number" data-clear-btn="true" placeholder="Minutter" />
+      <div class="input-group-addon">minutter</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Sekonder</label>
+    <div class="input-group">
+      <input ng-model="seconds" class="form-control input-lg" name="seconds" type="number" data-clear-btn="true" placeholder="Sekunder" />
+      <div class="input-group-addon">sekunder</div>
+    </div>
+  </div>
+
+  <button class="btn btn-lg btn-primary" type="submit" data-role="button">Udregn</button>
+</form>
+
+<div class="bg-info well-lg" style="margin-top: 1em;">
+  <p>Vdot: {{vdot(hours, minutes, seconds, distance)}}</p>
+</div>
