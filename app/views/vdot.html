@@ -33,4 +33,27 @@
 
 <div class="bg-info well-lg" style="margin-top: 1em;">
   <p>Vdot: {{vdot(hours, minutes, seconds, distance)}}</p>
+  <table>
+    <tr>
+      <th>Roligt løb</th>
+      <td>{{secondsToTime(PaceE(vdot(hours, minutes, seconds, distance)))}} min/km</td>
+    </tr>
+    <tr>
+      <th>Maratontempo</th>
+      <td>{{secondsToTime(PaceM((hours * 60 + 1 * minutes + seconds / 60), distance * 1000))}} min/km</td>
+    </tr>
+    <tr>
+      <th>Tempotur</th>
+      <td>{{secondsToTime(PaceT(vdot(hours, minutes, seconds, distance)))}} min/km</td>
+    </tr>
+    <tr>
+      <th>Intervaltræning</th>
+      <td>{{secondsToTime(PaceI(vdot(hours, minutes, seconds, distance)))}} min/km</td>
+    </tr>
+    <tr>
+      <th>Repetitionsintervaller</th>
+      <td>{{secondsToTime(PaceR(vdot(hours, minutes, seconds, distance)))}} min/km</td>
+    </tr>
+
+  </table>
 </div>

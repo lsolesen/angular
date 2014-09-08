@@ -21,23 +21,23 @@ describe('Controller: VdotCtrl', function () {
   });
 
   it('should calculate pace E correctly', function () {
-    expect(scope.PaceE(52)).toBe(488.1954503858185);
+    expect(scope.PaceE(52)).toBe(303.35058905107826);
   });
 
   it('should calculate pace M correctly', function () {
-    expect(scope.PaceM(184, 42000)).toBe(423.1451455055189);
+    expect(scope.PaceM(184, 42000)).toBe(255.52979381039034);
   });
 
   it('should calculate pace T correctly', function () {
-    expect(scope.PaceT(52)).toBe(398.07463769044745);
+    expect(scope.PaceT(52)).toBe(247.3521122211581);
   });
 
   it('should calculate pace I correctly', function () {
-    expect(scope.PaceI(52)).toBe(364.6860877609408);
+    expect(scope.PaceI(52)).toBe(226.60542914438477);
   });
 
   it('should calculate pace R correctly', function () {
-    expect(scope.PaceR(52)).toBe(339.5050578337294);
+    expect(scope.PaceR(52)).toBe(210.95866255674946);
   });
 
 });
