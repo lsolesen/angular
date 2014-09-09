@@ -36,4 +36,9 @@ angular.module('workspaceApp')
      $scope.percentOfRm = function(rm, percent) {
        return rm * percent / 100;
      };
+     $scope.calcRM = function(rm, number) {
+       var a = -2.78;
+       var b = 102.78;
+       return Math.round(((a*number+b)*rm/100) * Math.pow(10,1))/Math.pow(10,1);
+     };
   });

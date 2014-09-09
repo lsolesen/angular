@@ -44,4 +44,11 @@ describe('Controller: OneRMCtrl', function () {
     expect(scope.wathan(82, 5)).toBe(96);
   });
 
+  it('should calculate RM sub values correctly', function () {
+    expect(scope.calcRM(82, 5)).toBe(72.9);
+  });
+  
+  it('should calculate percent correctly', function () {
+    expect(scope.percentOfRm(82, 90)).toBe(73.8);
+  });
 });
