@@ -1,0 +1,53 @@
+<form role="form" ng-submit="Calculate(form)">
+  <div class="form-group">
+    <label>Køn:</label>
+    <label class="radio-inline">
+      <input ng-model="sex" name="sex" type="radio" value="1" /> 
+      Mand</label>
+    <label class="radio-inline">
+      <input ng-model="sex" name="sex" type="radio" value="0" /> 
+      Kvinde</label>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Alder</label>
+    <div class="input-group">
+      <input ng-model="age" class="form-control input-lg" name="age" type="number" data-clear-btn="true" placeholder="Alder i år" />
+      <div class="input-group-addon">år</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Puls</label>
+    <div class="input-group">
+      <input ng-model="pulse" class="form-control input-lg" name="pulse" type="number" data-clear-btn="true" placeholder="Puls / min" />
+      <div class="input-group-addon">hjerteslag/min</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Vægt</label>
+    <div class="input-group">
+      <input ng-model="weight" class="form-control input-lg" name="weight" type="number" data-clear-btn="true" placeholder="Vægt i kg" />
+      <div class="input-group-addon">kg</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Minutes</label>
+    <div class="input-group">
+      <input ng-model="minutes" class="form-control input-lg" name="minutes" type="number" data-clear-btn="true" placeholder="Minutter" />
+      <div class="input-group-addon">min</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="sr-only">Seconds</label>
+    <div class="input-group">
+      <input ng-model="seconds" class="form-control input-lg" name="seconds" type="number" data-clear-btn="true" placeholder="Sekunder" />
+      <div class="input-group-addon">sek</div>
+    </div>
+  </div>
+
+  <button class="btn btn-lg btn-primary" type="submit" data-role="button">Udregn</button>
+</form>
+
+<div class="bg-info well-lg" style="margin-top: 1em;">
+  <p>VO2Max: {{VO2Max(minutes, seconds, weight, age, sex, pulse) | number: 0}} ml O2/min</p>
+  <p>Kondital: {{Kondital(VO2Max(minutes, seconds, weight, age, sex, pulse), weight) | number: 0}} ml O2/min/kg kropsvægt</p>
+</div>

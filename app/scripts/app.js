@@ -39,6 +39,10 @@ angular
         templateUrl: 'views/1rm.html',
         controller: 'OneRMCtrl'
       })
+      .when('/1point6', {
+        templateUrl: 'views/1point6.html',
+        controller: 'OnepointsixCtrl'
+      })
       .when('/vdot', {
         templateUrl: 'views/vdot.html',
         controller: 'VdotCtrl'

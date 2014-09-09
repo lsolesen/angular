@@ -9,6 +9,9 @@
  */
 angular.module('workspaceApp')
   .controller('OneRMCtrl', function ($scope) {
+     $scope.rm = function(weight, repetitions) {
+       return $scope.brzycki(weight, repetitions);
+     };
      $scope.brzycki = function(weight, repetitions) {
        return Math.round(weight*(36/(37-repetitions)));
      };
@@ -29,5 +32,8 @@ angular.module('workspaceApp')
      };
 		 $scope.wathan = function(weight, repetitions) {
        return Math.round((100*weight)/(48.8 + (53.8*Math.exp(-0.075*repetitions))));
+     };
+     $scope.percentOfRm = function(rm, percent) {
+       return rm * percent / 100;
      };
   });
