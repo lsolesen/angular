@@ -1,3 +1,5 @@
+<h1>Energiberegning</h1>
+
 <form role="form" ng-submit="Calculate(form)">
   <div class="form-group">
     <label class="sr-only">Distance</label>
@@ -18,5 +20,5 @@
 </form>
 
 <div class="bg-info well-lg" style="margin-top: 1em;">
-  <p>Energiforbrug: {{energy(weight, distance)}} kJ</p>
+  <p>Energiforbrug: {{energy(weight, distance) | number: 0}} kJ</p>
 </div>

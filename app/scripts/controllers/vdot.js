@@ -61,7 +61,7 @@ angular.module('workspaceApp')
       var Minutes = parseInt(Seconds / 60);
       Seconds = parseInt(Seconds - Minutes * 60);
 
-      return (Hours > 0 ? Hours + ":" : "") + (Minutes < 10 && Hours > 0 ? "0" : "") + Minutes + ":" + (Seconds < 10 ? "0" : "") + Seconds;
+      return (Hours > 0 ? Hours + ':' : '') + (Minutes < 10 && Hours > 0 ? '0' : '') + Minutes + ':' + (Seconds < 10 ? '0' : '') + Seconds;
     };
 
     /* http://www.alpfitness.com/calculators/running_pace_zones_vdot.html */

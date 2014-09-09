@@ -1,3 +1,4 @@
+<h1>Udregning af fedtprocent</h1>
 <form role="form" ng-submit="Calculate(form)">
   <div class="form-group">
     <label>Køn:</label>
@@ -34,7 +35,7 @@
 </form>
 
 <div class="bg-info well-lg" style="margin-top: 1em;">
-  <p>BMI: {{BMI(weight, height)}}</p>
-  <p>Fedtmasse: {{fatMass(BMI(weight, height), age, weight, sex)}} kg</p>
-  <p>Fedtprocent: {{fatPercent(fatMass(BMI(weight, height), age, weight, sex), weight)}}%</p>
+  <p>BMI: {{BMI(weight, height) | number: 0}}</p>
+  <p>Fedtmasse: {{fatMass(BMI(weight, height), age, weight, sex) | number: 0}} kg</p>
+  <p>Fedtprocent: {{fatPercent(fatMass(BMI(weight, height), age, weight, sex), weight) | number: 0}}%</p>
 </div>

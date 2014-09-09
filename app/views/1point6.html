@@ -1,3 +1,4 @@
+<h1>1.6 km gangtest</h1>
 <form role="form" ng-submit="Calculate(form)">
   <div class="form-group">
     <label>Køn:</label>
@@ -48,6 +49,6 @@
 </form>
 
 <div class="bg-info well-lg" style="margin-top: 1em;">
-  <p>VO2Max: {{VO2Max(minutes, seconds, weight, age, sex, pulse) | number: 0}} ml O2/min</p>
+  <p>VO<sub>2</sub>Max: {{VO2Max(minutes, seconds, weight, age, sex, pulse) | number: 0}} ml O2/min</p>
   <p>Kondital: {{Kondital(VO2Max(minutes, seconds, weight, age, sex, pulse), weight) | number: 0}} ml O2/min/kg kropsvægt</p>
 </div>
